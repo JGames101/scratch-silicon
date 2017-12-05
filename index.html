@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="manifest" href="manifest.json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scratch Silicon</title>
+<link href="https://jgames101.github.io/styles.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,200" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+<link rel="stylesheet" href="node_modules/material-components-web/dist/material-components-web.css">
+<script src="javascript.js"></script>
+<style>
+.hidden {
+  display: none;
+}
+.unhidden {
+  display: block;
+}
+.card {
+    display: block;
+    margin: auto;
+}
+* {
+    --mdc-theme-primary: #00acc1;
+    --mdc-theme-secondary: #ff9800;
+}
+</style>
+</head>
+<body>
+<div id="menu">
+	<header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--fixed-lastrow-only">
+        <div class="mdc-toolbar__row" id="titleBar">
+        <h2 style="font-size:23px;padding-left:32px;font-family:'Roboto Condensed';color:white;" id="menuTitle">Scratch Silicon</h2>
+        </div>
+    </header>
+</div>
+<div class="content" ng-app="">
+  <div class="card" ng-app="">
+  <div class="card" id="generate">
+  </div>
+  <h2>GENERATE</h2>
+  <p>Enter the ID number of a Scratch Project, and then click next on the card beside. It will then open the Scratch project in the Scratch 3.0 player.</p>
+	  <p><div class="mdc-text-field">
+        <input type="text" id="projectID" class="mdc-text-field__input" placeholder="Project ID">
+        <div class="mdc-text-field__bottom-line"></div>
+      </div>
+      <button onclick="javascript:loadProject()" class="mdc-button mdc-button--raised">Generate!</button></p>
+  </div>
+  <div class="card" id="embedCodeBox" style="display:none;">
+	  <h2>EMBED CODE (WIP)</h2 >  
+	  <p id="embedCode">loading...</p>
+	  <p>URL: <a id="urlLink" href="project">loading...</a>
+  </div>
+</div>
+<script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+<script>mdc.autoInit()</script>
+<script src="/jquery-3.2.1.min.js"></script>
+</body>
+</html>
