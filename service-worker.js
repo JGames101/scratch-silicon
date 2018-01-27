@@ -4,8 +4,7 @@ var CACHE = 'scratchSilicon';
 var precacheFiles = [
       'index.html',
       'javascript.js',
-      'jquery-3.2.1.min.js',
-      'node_modules/material-components-web/dist/material-components-web.css',
+      'jquery-3.2.1.min.js'
     ];
 
 //Install stage sets up the cache-array to configure pre-cache content
